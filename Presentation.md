@@ -42,7 +42,7 @@ Başta bahsettiğimiz gibi reflection sınıfı çalışma zamanında yetenekler
     13.IsGenericType
     
 Bu propertyler type sınıfı altındaki en çok kullanılan propertylerdir bu propertyler kullanılarak program akışında kararlar alınabilinir.
-Örnek vermek gerekirse bir sınıf altındaki methodu invoke etmek istediğimiz zaman hangi instance üzerindeki methodu invoke etmek istediğimizi belirtmek durumundayızdır çünkü program bu instance'ı belirtmez isek assembly üzerindeki hangi nesne örneğini kullanacağını bilemez.Fakat bildiğimi gibi abstract sınıflar için bir nesne örneği türetilmez bu yüzden "IsAbstract" ifadesini kontrol ederek instance kullanmadan method invoke edebiliriz.
+Örnek vermek gerekirse bir sınıf altındaki methodu invoke etmek istediğimiz zaman hangi instance üzerindeki methodu invoke etmek istediğimizi belirtmek durumundayızdır çünkü program bu instance'ı belirtmez isek assembly üzerindeki hangi nesne örneğini kullanacağını bilemez.Fakat bildiğimi gibi static sınıflar için bir nesne örneği türetilmez bu yüzden "IsAbstract" ifadesini kontrol ederek instance kullanmadan method invoke edebiliriz.
     
  # Çok kullanılan Tür methodları
     1.GetFields()
