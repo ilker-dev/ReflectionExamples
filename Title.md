@@ -31,14 +31,14 @@
         2.GetProperties()
         3.GetMethods()
         4.GetConstructors()
-   # 6.Instantiation(Örnekleme) Teknikleri
+   # 7.Instantiation(Örnekleme) Teknikleri
        1.ConstructorInfo Invoke()
        2.Activator CreateInstance() 
-   # 7.Invocation(Çağırma) Teknikleri
+   # 8.Invocation(Çağırma) Teknikleri
        1.Use an Interface
        2.Method Invoke
        3.Define a Delegate
        4.Create a Typed Func
        5.Create an Expression Tree
        6.Use a dynamic Type
-   # 8.Reflection Üzerine ...
+   # 9.Reflection Üzerine ...
