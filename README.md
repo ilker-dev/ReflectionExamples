@@ -47,7 +47,10 @@ Bu propertyler type sınıfı altındaki en çok kullanılan propertylerdir bu p
 Not: yukardaki Fields Properties Methods methodları bütün nesne üzerindeki ilgili özellikleri getirir bunları tekil olarak da       kullanabilmekteyiz.Örn:Type.GetProperty(PROPERTY_NAME) gibi.
   
        
-# 
+# Instantiation(Örnekleme) Teknikleri
+    1.ConstructorInfo Invoke()
+    2.Activator CreateInstance()
+
    
   
    
