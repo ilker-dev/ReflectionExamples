@@ -49,10 +49,19 @@ Not: yukardaki Fields Properties Methods methodları bütün nesne üzerindeki i
        
 # Instantiation(Örnekleme) Teknikleri
     1.ConstructorInfo Invoke()
-    2.Activator CreateInstance()
-
+    2.Activator CreateInstance() 
+Reflection kütüphanesi kullanılarak herhangi bir sınıfın instance'ı üretilebilir instance aslında assembly üzerindeki nesnenin bir örneğini üretmek demektir ve bu iki farklı yöntemle yapılabilir aralarında herhangi bir fark bulunmamaktadır. Bu işlemlerin terimsel adı <b>"Late Binding"</b> olarak geçmektedir. yaptığı iş aslnda direkt olarak şudur;
+<b> Customer customer = new Customer()</b>
+fakat burda dikkat edilmesi gereken olay eğer biz instance oluşturacağımız sınıfın tipini kodlama zamanında biliyorsak mutlaka <b>"Early Binding" </b> olarak kullanmamız gerekmektedir.
    
-  
+# Reflection Üzerine ...
+
+Reflection işleminde nesnenin yüklenip işlenmesi için büyük miktarda metadata type gerektirir. Buda büyük bir bellek ek yükü ve daha yavaş execution işlemine sebep olabilir.Özellik Property manipulation işlemi yaklaşık 2.5x-3x yavaştır ve Method Invocation işlemi ise 3.5x-4x yavaştır. Ayrıca, reflection belli bir seviyede karıştırıcı olabilir ve bu nedenle birlikte kodlamayı zorlaştıran ve koda ekleyebileceği bir karmaşıklık unsuru vardır.Buna üstadın sözüyle devam edelim.
+
+ <b>SCOTT HANSELMAN</b> : Using reflection you often make more problems than you solve. 
+ (Reflection kullanmak genellikle çözdüğünden fazla problem yaratır.)
+
+
    
    
   
