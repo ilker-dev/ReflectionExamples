@@ -5,7 +5,12 @@
  
 Reflection runtime'da assembly içerisindeki classlar methodlar propertylerden bilgi alınmasını sağlayan bir .net sınıfıdır.Bu özellik .net'in oldukça güçlü bir özelliğidir tabiki diğer diller de reflective yapılarla meta data üzerindeki verilere erişebilmektedir.
 Reflection sınıfı bu işi yapabilmek için "System.Reflection" sınıfını kullanır .Net tabanındaki bütün nesnelerin birer tipi vardır ve Reflection sınıfı herhangi bir nesnenin methodununa property'sine yada attribute'une erişmek istediği zaman runtime'da "System.Type" sınıfını kullanır "Type" sınıfı abstract bir sınıftır ve MemberInfo sınıfından türemiştir bir çok methoda ve property'e sahiptir.Bu sınıf herhangi bir sınıfın özelliklerini okuyabilir , methodlarını , constructors methodlarını okuyabilir ve  bazılarını manipüle edebilir.
-
+ # Assembly'i Anlamak
+ 
+ Assembly .net framework üzerinde compile edilmiş tüm dll ve exe dosyalarına denir bu dosyalar projelerle ilgili metadata bilgilerini içinde saklarlar.Bir application'un assemblydeki yansımasını görmek için şu adımları izleye biliriz.
+ 
+ Start  => Search => dev or developer command prompt => ildasm  Pronounce => "Eye Ell Dazzem"
+ 
  # Reflection Sınıfının Yetenekleri
       1. Introspection (Gözlemleme)
       2. Manipulation (Değiştirme)
@@ -18,7 +23,7 @@ Reflection sınıfı bu işi yapabilmek için "System.Reflection" sınıfını k
         2.Assembly GetTypes()
         3.typeof(SINIF)         
  
- Başta bahsettiğimiz gibi reflection sınıfı çalışma zamanında yeteneklerini kullanabilmek için nesnelerin tiplerini kullanır bir nesnenin tip   bilgisine ulaşmak için bir kaç method bulunmaktadır. 
+Başta bahsettiğimiz gibi reflection sınıfı çalışma zamanında yeteneklerini kullanabilmek için nesnelerin tiplerini kullanır bir nesnenin tip  bilgisine ulaşmak için bir kaç method bulunmaktadır. 
      
 # Çok kullanılan Tür Özellikleri
     1.Name
@@ -50,9 +55,21 @@ Not: yukardaki Fields Properties Methods methodları bütün nesne üzerindeki i
 # Instantiation(Örnekleme) Teknikleri
     1.ConstructorInfo Invoke()
     2.Activator CreateInstance() 
+    
 Reflection kütüphanesi kullanılarak herhangi bir sınıfın instance'ı üretilebilir instance aslında assembly üzerindeki nesnenin bir örneğini üretmek demektir ve bu iki farklı yöntemle yapılabilir aralarında herhangi bir fark bulunmamaktadır. Bu işlemlerin terimsel adı <b>"Late Binding"</b> olarak geçmektedir. yaptığı iş aslnda direkt olarak şudur;
 <b> Customer customer = new Customer()</b>
 fakat burda dikkat edilmesi gereken olay eğer biz instance oluşturacağımız sınıfın tipini kodlama zamanında biliyorsak mutlaka <b>"Early Binding" </b> olarak kullanmamız gerekmektedir.
+
+# Invocation(Çağırma) Teknikleri
+    1.Use an Interface
+    2.Method Invoke
+    3.Define a Delegate
+    4.Create a Typed Func
+    5.Create an Expression Tree
+    6.Use a dynamic Type
+    
+Reflection kütüphanesi kullanılarak nesne üzerindeki methodları cağırabileceğimizi söylemiştik.bunları yapabilmek için birden fazla teknik bulunmakta bunlardan bir kaçına burada değineceğim.
+
    
 # Reflection Üzerine ...
 
