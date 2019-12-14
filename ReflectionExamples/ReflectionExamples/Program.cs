@@ -10,7 +10,8 @@ namespace ReflectionExamples
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine(typeof(AssemblyExample).IsAbstract);
+            Console.ReadKey();
         }
     }
 }
