@@ -36,15 +36,16 @@ Reflection sınıfı bu işi yapabilmek için "System.Reflection" sınıfını k
     12.IsAbstract
     13.IsGenericType
     
+Bu propertyler type sınıfı altındaki en çok kullanılan propertylerdir bu propertyler kullanılarak program akışında kararlar alınabilinir.
+Örnek vermek gerekirse bir sınıf altındaki methodu invoke etmek istediğimiz zaman hangi instance üzerindeki methodu invoke etmek istediğimizi belirtmek durumundayızdır çünkü program bu instance'ı belirtmez isek assembly üzerindeki hangi nesne örneğini kullanacağını bilemez.Fakat bildiğimi gibi abstract sınıflar için bir nesne örneği türetilmez bu yüzden "IsAbstract" ifadesini kontrol ederek instance kullanmadan method invoke edebiliriz.
+    
  # Çok kullanılan Tür methodları
     1.GetFields()
     2.GetProperties()
     3.GetMethods()
     4.GetConstructors()
-    Not: yukardaki Fields Properties Methods methodları bütün nesne üzerindeki ilgili özellikleri getirir bunları tekil olarak da kullanabilmekteyiz Örn:Type.GetProperty(PROPERTY_NAME) gibi.
-    
- Bu propertyler type sınıfı altındaki en çok kullanılan propertylerdir bu propertyler kullanılarak program akışında kararlar alınabilinir.
- Örnek vermek gerekirse bir sınıf altındaki methodu invoke etmek istediğimiz zaman hangi instance üzerindeki methodu invoke etmek istediğimizi belirtmek durumundayızdır çünkü program bu instance'ı belirtmez isek assembly üzerindeki hangi nesne örneğini kullanacağını bilemez.Fakat bildiğimi gibi abstract sınıflar için bir nesne örneği türetilmez bu yüzden "IsAbstract" ifadesini kontrol ederek instance kullanmadan method invoke edebiliriz.
+Not: yukardaki Fields Properties Methods methodları bütün nesne üzerindeki ilgili özellikleri getirir bunları tekil olarak da       kullanabilmekteyiz.Örn:Type.GetProperty(PROPERTY_NAME) gibi.
+  
        
 # 
    
