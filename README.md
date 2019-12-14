@@ -14,10 +14,31 @@ Reflection sınıfı bu işi yapabilmek için "System.Reflection" sınıfını k
       5. Type Loading(Tip Yükleme)
       
  # Bir Type Instance'ı yakalamak
-   Başta bahsettiğimiz gibi reflection sınıfı çalışma zamanında yeteneklerini kullanabilmek için nesnelerin tiplerini kullanır bir nesnenin tip    bilgisine ulaşmak için bir kaç method bulunmaktadır.
-   1.Object GetType()
-   2.Assembly GetTypes()
-   3.typeof(SINIF)
+        1.Object GetType()
+        2.Assembly GetTypes()
+        3.typeof(SINIF)         
+ 
+ Başta bahsettiğimiz gibi reflection sınıfı çalışma zamanında yeteneklerini kullanabilmek için nesnelerin tiplerini kullanır bir nesnenin tip   bilgisine ulaşmak için bir kaç method bulunmaktadır. 
+     
+# Çok kullanılan Tür Özellikleri
+    1.Name
+    2.NameSpace
+    3.FullName
+    4.BaseType
+    5.Attributes
+    6.Implements
+    7.IsClass
+    8.IsInterface
+    9.IsEnum
+    9.IsPrimitive
+    10.IsArray
+    11.IsPublic
+    12.IsAbstract
+    13.IsGenericType
+    
+ Bu propertyler type sınıfı altındaki en çok kullanılan propertylerdir bu propertyler kullanılarak program akışında kararlar alınabilinir.
+ Örnek vermek gerekirse bir sınıf altındaki methodu invoke etmek istediğimiz zaman hangi instance üzerindeki methodu invoke etmek istediğimizi belirtmek durumundayızdır çünkü program bu instance'ı belirtmez isek assembly üzerindeki hangi nesne örneğini kullanacağını bilemez.Fakat bildiğimi gibi abstract sınıflar için bir nesne örneği türetilmez bu yüzden "IsAbstract" ifadesini kontrol ederek instance kullanmadan method invoke edebiliriz.
+       
    
   
    
