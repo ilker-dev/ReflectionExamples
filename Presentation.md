@@ -50,6 +50,19 @@ Bu propertyler type sınıfı altındaki en çok kullanılan propertylerdir bu p
     3.GetMethods()
     4.GetConstructors()
 Not: yukardaki Fields Properties Methods methodları bütün nesne üzerindeki ilgili özellikleri getirir bunları tekil olarak da       kullanabilmekteyiz.Örn:Type.GetProperty(PROPERTY_NAME) gibi.
+
+#Get method Not:
+
+Hangi acces modifierlarını temsil ettiğini görebiliriz.
+
+Instance ise static olmayan method demektir.
+
++-------------+--------+---------+-----------+----------+--------------------+
+| BindingFlag | Public | Private | Protected | Internal | Protected Internal |
++-------------+--------+---------+-----------+----------+--------------------+
+| NonPublic   | No     | Yes     | Yes       | Yes      | Yes                |
+| Public      | Yes    | No      | No        | No       | No                 |
++-------------+--------+---------+-----------+----------+--------------------+
   
        
 # Instantiation(Örnekleme) Teknikleri
