@@ -57,12 +57,14 @@ Hangi acces modifierlarını temsil ettiğini görebiliriz.
 
 Instance ise static olmayan method demektir.
 
+<pre>
 +-------------+--------+---------+-----------+----------+--------------------+
 | BindingFlag | Public | Private | Protected | Internal | Protected Internal |
 +-------------+--------+---------+-----------+----------+--------------------+
 | NonPublic   | No     | Yes     | Yes       | Yes      | Yes                |
 | Public      | Yes    | No      | No        | No       | No                 |
 +-------------+--------+---------+-----------+----------+--------------------+
+</pre>
   
        
 # Instantiation(Örnekleme) Teknikleri
