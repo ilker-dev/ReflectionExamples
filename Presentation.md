@@ -5,6 +5,11 @@
  
 Reflection runtime'da assembly içerisindeki classlar methodlar propertylerden bilgi alınmasını sağlayan bir .net sınıfıdır.Bu özellik .net'in oldukça güçlü bir özelliğidir tabiki diğer diller de reflective yapılarla meta data üzerindeki verilere erişebilmektedir.
 Reflection sınıfı bu işi yapabilmek için "System.Reflection" sınıfını kullanır .Net tabanındaki bütün nesnelerin birer tipi vardır ve Reflection sınıfı herhangi bir nesnenin methodununa property'sine yada attribute'une erişmek istediği zaman runtime'da "System.Type" sınıfını kullanır "Type" sınıfı abstract bir sınıftır ve MemberInfo sınıfından türemiştir bir çok methoda ve property'e sahiptir.Bu sınıf herhangi bir sınıfın özelliklerini okuyabilir , methodlarını , constructors methodlarını okuyabilir ve  bazılarını manipüle edebilir.
+
+Peki biz ne zaman reflection kullanacağız bunu nasıl bilmeliyiz. Programlamada reflection genellikle orta ve büyük ölçekli firmalarda framework tabanına yerleştirilmiş olarak durur bunun sebebi reflection kullanmak maliyetlidir ve büyük projelerde bu yapıları genelde framework mimarları kurarlar ve developerların kullanımına sunarlar Örn: Mapping gibi
+Ben eski çalıştığım firmada entity objeleri üzerinde kopyalama işlemi yapmak için kullandım. uyap entegrasyonu sırasında ise invocation yapısını kullanarak gelen dosyalar ve davalar üzerinde dinamik çalışmasını sağlayacak ve veritabanına bu bilgileri yazacak bir exe yapmıştım.
+
+Öncelikle biraz teorik olarak bu konuyu anlatmak ıstıyorum.
  # Assembly'i Anlamak
  
  Assembly .net framework üzerinde compile edilmiş tüm dll ve exe dosyalarına denir bu dosyalar projelerle ilgili metadata bilgilerini içinde saklarlar.Bir application'un assemblydeki yansımasını görmek için şu adımları izleye biliriz.
