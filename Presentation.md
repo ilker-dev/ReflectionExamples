@@ -25,7 +25,7 @@ Reflection sınıfı bu işi yapabilmek için "System.Reflection" sınıfını k
  
 Başta bahsettiğimiz gibi reflection sınıfı çalışma zamanında yeteneklerini kullanabilmek için nesnelerin tiplerini kullanır bir nesnenin tip  bilgisine ulaşmak için bir kaç method bulunmaktadır. 
      
-# Çok kullanılan Tür Özellikleri
+# Çok kullanılan Type Özellikleri
     1.Name
     2.NameSpace
     3.FullName
@@ -44,7 +44,7 @@ Başta bahsettiğimiz gibi reflection sınıfı çalışma zamanında yetenekler
 Bu propertyler type sınıfı altındaki en çok kullanılan propertylerdir bu propertyler kullanılarak program akışında kararlar alınabilinir.
 Örnek vermek gerekirse bir sınıf altındaki methodu invoke etmek istediğimiz zaman hangi instance üzerindeki methodu invoke etmek istediğimizi belirtmek durumundayızdır çünkü program bu instance'ı belirtmez isek assembly üzerindeki hangi nesne örneğini kullanacağını bilemez.Fakat bildiğimi gibi static sınıflar için bir nesne örneği türetilmez bu yüzden "IsAbstract" ifadesini kontrol ederek instance kullanmadan method invoke edebiliriz.
     
- # Çok kullanılan Tür methodları
+ # Çok kullanılan Type methodları
     1.GetFields()
     2.GetProperties()
     3.GetMethods()
