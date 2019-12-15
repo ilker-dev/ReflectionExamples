@@ -51,7 +51,7 @@ Bu propertyler type sınıfı altındaki en çok kullanılan propertylerdir bu p
     4.GetConstructors()
 Not: yukardaki Fields Properties Methods methodları bütün nesne üzerindeki ilgili özellikleri getirir bunları tekil olarak da       kullanabilmekteyiz.Örn:Type.GetProperty(PROPERTY_NAME) gibi.
 
-#Get method Not:
+# Get method Not:
 
 Hangi acces modifierlarını temsil ettiğini görebiliriz.
 
