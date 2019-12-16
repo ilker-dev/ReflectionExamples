@@ -22,15 +22,16 @@ namespace ReflectionExamples
 
             #region [ Reflection Helper]
 
-            //var example = new AssemblyExample();
+            var example = new AssemblyExample();
 
-            //example.TestProperty = new Test() { TestNumber = 1 };
 
-            //Console.WriteLine(GetPropValue(example, "TestProperty.TestNumber"));
+            // servisten gelen cevap olarak düşünebiliriz.
+            //example.TestProperty = new Test() { TestNumber = 132131321 };
+            //var valueTesNumber =   GetPropValue(example, "TestProperty.TestNumber");
+
+            //Console.WriteLine(valueTesNumber);
 
             #endregion
-
-
 
             //GetConstructors(typeof(AssemblyExample));
 
@@ -108,6 +109,8 @@ namespace ReflectionExamples
             }
             return obj;
         }
+        
+        
 
         #endregion
 
@@ -177,12 +180,20 @@ namespace ReflectionExamples
         }
         public static void DynamicInvoke(Type classType)
         {
-            Type dynamicType = Assembly
-                 .GetExecutingAssembly()
-                 .GetType("ReflectionExamples.AssemblyExample");
+            try
+            {
+                Type dynamicType = Assembly
+                .GetExecutingAssembly()
+                .GetType("ReflectionExamples.AssemblyExample");
 
-            dynamic exampleClass = Activator.CreateInstance(dynamicType);
-            exampleClass.Method3("test");
+                dynamic exampleClass = Activator.CreateInstance(dynamicType);
+                exampleClass.Method566("test");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("HATA");
+            }
+           
 
         }
 
