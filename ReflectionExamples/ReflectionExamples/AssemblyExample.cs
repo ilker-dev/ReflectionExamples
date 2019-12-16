@@ -39,14 +39,12 @@ namespace ReflectionExamples
         public string Name { get { return _name; } set { _name = value; } }
 
         public Test TestProperty { get; set; }
-        public Test TestProperty1 { get; set; }
 
     }
 
     public class Test
     {
         public int TestNumber { get; set; }
-        public int TestNumber1 { get; set; }
 
     }
 }
